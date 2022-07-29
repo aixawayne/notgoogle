@@ -7,7 +7,8 @@ export default function User(){
     if(session){ //si la persona esta autenticada, devolve esto
         return (
             <>
-            <img onClick={signOut} src={session.user.image} alt="user-image" className="h-10 w-10 rounded-full cursor-pointer" ></img>
+            <img onClick={signOut} src={session.user.image} alt="user-image" referrerPolicy='no-referrer' className="h-10 w-10 rounded-full cursor-pointer" ></img>
+            <p>Holi {session.user.name}</p>
             </>
         )
     }
